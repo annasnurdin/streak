@@ -1,0 +1,7 @@
+baca-baca ulang flutter di docs.flutter.dev
+asik juga ternyata baca docs dari awal. awalnya memang aku mulai tertarik dengan flutter langsung mencoba membuat program helloworld-nya. padahal sebelum itu ada step yang perlu diketahui, seperti dart dan OOP. yah, hal-hal fundamental seperti itu laah~
+
+  - flutter itu widget
+  - child besarnya mengikuti parent
+
+  
