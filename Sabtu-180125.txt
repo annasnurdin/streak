@@ -1,0 +1,16 @@
+Hari ini baca-baca layout flutter constraint. 
+
+Poin-poin belajar:
+  - "Constraints go down. Sizes go up. Parent sets the position."
+  - Container akan memberikan luasan seluas mungkin constraint nya. Akan tetapi kalau diberikan batasan (ada 4 batasan = min width, min height, max width, max height) maka akan mengikuti batasan yang diberikan.
+  - Untuk membuat widget, pada dasarnya = bungkus widget yang terlihat seperti Image atau Text dengan widget yang bisa mengubah posisi seperti Center widget
+  - mainAxisAlignment. Untuk Row horizontal, untuk Column yang vertikal. 
+      contoh: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,) //ini akan membuat widget di dalamnya menjadi berisi space yang sama. 
+  - Untuk mengatasi widget yang overflowed / over (saja biar ingat) maka yang dibungkus widget yang terlihat dengan Expanded. Misal dalam Row ada Image. Nah ini overflow karena width nya di resize (entah ganti device atau webnya di resize), untuk mengatasinya tinggal wrap Image dengan Expanded.
+  - Kalau sebuah child mau ukurannya multiple dari saudaranya, pakai property flex. Default nya 1 (jadi sama semua). kalau flex = 2, maka dia kalau di resize, akan 2x nya saudara-saudaranya.
+  - Untuk mengatasi unbounded, bungkus pakai Expanded dan kalau ingin fixed, pakai SizedBox. Unbounded ini sering terjadi di ListView yang ada di dalam widget Column. Cara mengatasinya yaitu masukkan ListView di dalam Expanded. Maka child saudaranya Expanded ini akan tetap dapat height. 
+
+//TODO
+
+Belajar Adaptive Layout
