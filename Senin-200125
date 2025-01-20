@@ -1,0 +1,41 @@
+Baca lagi masih tentang layout di flutter
+
+Widget build(BuildContext context) {
+  return LayoutBuilder(
+    builder: (BuildContext context, BoxConstraints constraints) {
+      if (constraints.maxWidth <= 600) { //////////
+        return _MobileLayout();
+      } else {
+        return _DesktopLayout();
+      }
+    },
+  );
+}
+
+kode di atas untuk memisahkan layout mobile dan layout desktop. 
+//////////////////////////////////////////////////////////////
+
+final List<ToDo> items = Repository.fetchTodos();
+
+Widget build(BuildContext context) {
+  return ListView.builder(
+    itemCount: items.length,
+    itemBuilder: (context, idx) {
+      var item = items[idx];
+      return Container(
+        color: idx % 2 == 0 ? Colors.lightBlue : Colors.transparent, //////////
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(item.description),
+            Text(item.isComplete),
+          ],
+        ),
+      );
+    },
+  );
+}
+
+kode di atas untuk membuat selang-seling warna setiap item saat menggunakan item builder
+////////////////////////////////////////////////////////////////////////////////////////
